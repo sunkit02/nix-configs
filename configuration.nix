@@ -106,6 +106,7 @@
     alacritty
     clang
     zsh
+    fastfetch
 #  wget
   ];
 
