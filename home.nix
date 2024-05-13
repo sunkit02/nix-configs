@@ -24,7 +24,7 @@
 
   programs.git = {
     enable = true;
-    userName = "sunkit02";
-    userEmail = "sunkit02@users.noreply.github.com";
+    userName = "Sun Kit Tsui";
+    userEmail = "sunkittsui@gmail.com";
   };
 }
