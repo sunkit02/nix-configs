@@ -85,8 +85,8 @@
     description = "sunkit";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kate
       librewolf
+      rustup
     #  thunderbird
     ];
   };
@@ -104,6 +104,8 @@
     yazi  
     git
     alacritty
+    clang
+    zsh
 #  wget
   ];
 
