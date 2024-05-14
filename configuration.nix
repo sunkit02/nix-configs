@@ -85,11 +85,22 @@
     description = "sunkit";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      # Cli utils
+      lsd
+      fzf
+      zoxide
+
+      # General apps
       librewolf
+
+      # Development
       rustup
-    #  thunderbird
     ];
   };
+
+  # Install zsh and set as default shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -105,10 +116,15 @@
     git
     alacritty
     clang
-    zsh
     fastfetch
+    tmux
 #  wget
   ];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
